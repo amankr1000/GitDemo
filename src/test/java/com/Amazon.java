@@ -16,6 +16,7 @@ public class Amazon {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.com");
 		driver.manage().window().maximize();
+                //Actions code
 		Actions a=new Actions(driver);
 		a.moveToElement(driver.findElement(By.xpath("//a[@id='nav-link-accountList']"))).contextClick().build().perform();
 		a.moveToElement(driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"))).click().keyDown(Keys.SHIFT).sendKeys("hello").doubleClick().build().perform();
